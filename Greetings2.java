@@ -7,7 +7,7 @@ public class Greetings2 extends JPanel {
    private int myWindowWidth = 300;
    private int myWindowHeight = 400;
 	
-   public Greetings() {
+   public Greetings2() {
       JFrame easel = new JFrame();		
       easel.setSize (myWindowWidth, myWindowHeight);
       easel.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
@@ -16,19 +16,27 @@ public class Greetings2 extends JPanel {
    }
    
    public void paintComponent (Graphics g) {
+      this.newDrawRect(g, 100, 100, 90, 40);
       
    }
-   
+
+
+   public void newDrawLine(Graphics g, int x, int y, int x1, int y1){
+   g.drawLine(x, y, x1, y1);
+}   
    
    // Step 25 Write newDrawRect2 here, which calls drawLine four times.
    public void newDrawRect(Graphics g, int tlx, int tly, int width, int height) {
-      
+      g.drawLine(tlx, tly, tlx + width, tly);
+      g.drawLine(tlx, tly, tlx, tly + height);
+      g.drawLine(tlx+ width, tly + height, tlx, tly + height);
+      g.drawLine(tlx + width, tly + height, tlx + width, tly);
    }
    
    // Step 26 This method takes top-left x, top-left y, bottom-right x, bottom-right y to define
    //  a rectangle.  It should take drawRect.
    public void newDrawRect2(Graphics g, int tlx, int tly, int brx, int bry) {
-      
+      this.newDrawRect2(g, tlx, tly, brx-tlx, bry-tly);
    }
 
    
