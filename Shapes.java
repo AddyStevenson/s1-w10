@@ -20,9 +20,27 @@ public class Shapes extends JPanel {
 
 
    public void paintComponent (Graphics g) {
-      //Experiment with new methods here. Don't forget setColor!
 
+      //g.setColor(Color.red);
+      //g.fillOval(100, 100, 50, 50);
+      //g.setColor(Color.pink);
+      //g.fillOval(50, 50, 50, 50);
+    this.drawBullsEye(g);
+
+   }
+   public void drawBullsEye(Graphics g){
+      g.setColor(Color.red);
+      g.fillOval(100, 100, 150, 150);
+      g.setColor(Color.black);
+      g.fillOval(125, 125, 100, 100);
+      g.setColor(Color.red);
+      g.fillOval(150, 150, 50, 50);
+
+   }
+
+   public void olympicRings(Graphics g){
       
 
    }
+
 }
