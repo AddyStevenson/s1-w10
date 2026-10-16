@@ -17,7 +17,7 @@ public class SimpleClicker extends JPanel implements MouseListener {
 
 	public void paintComponent(Graphics g){
 		if(xClick != -11 && yClick != -11)
-			g.drawOval(xClick, yClick, 100, 100);
+			g.drawOval(xClick - 50 , yClick - 50, 100, 100);
 	}
     
     public void mouseClicked (MouseEvent event) {
